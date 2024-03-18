@@ -1,0 +1,11 @@
+import base64
+
+url="https://www.google.co.in/search?q=test+match&sca_esv=7479081811d2e948&source=hp&ei=N7HwZbvMHdvuseMPmIO1oAk&iflsig=ANes7DEAAAAAZfC_Rz6ydEUPueY32wdBA9G9JSfaRmXJ&oq=test&gs_lp=Egdnd3Mtd2l6IgR0ZXN0KgIIAjIREC4YgAQYsQMYgwEYxwEY0QMyDhAAGIAEGIoFGLEDGIMBMggQABiABBixAzIIEAAYgAQYsQMyCxAAGIAEGLEDGIMBMgsQABiABBixAxiDATILEAAYgAQYsQMYgwEyCBAAGIAEGLEDMgsQABiABBixAxiDATIFEAAYgARIqy5Q0QdY_xxwAXgAkAEAmAFqoAHsAqoBAzMuMbgBAcgBAPgBAZgCBaACywOoAgrCAhAQABgDGI8BGOUCGOoCGIwDwgIFEC4YgATCAgsQLhiABBjHARjRA8ICBBAAGAPCAggQLhiABBixA8ICDhAuGIAEGLEDGMcBGNEDwgIOEC4YgAQYigUYsQMYgwGYA1OSBwM0LjGgB-kj&sclient=gws-wiz"
+
+sample_string = "GeeksForGeeks is the best"
+sample_string_bytes = sample_string.encode("ascii")
+
+base64_bytes = base64.b64encode(sample_string_bytes)
+base64_string = base64_bytes.decode("ascii")
+
+print(f"Encoded string: {base64_string}")
